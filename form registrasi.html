@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulir Pendaftaran Mahasiswa Baru</title>
+    <style>
+        body {
+            background-color: #a5c2db;
+            margin: 20px;
+            font-family: Arial, sans-serif;
+        
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 600px;
+            margin: auto;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        fieldset {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            padding: 15px;
+        }
+        legend {
+            font-weight: bold;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+        input[type="radio"], input[type="checkbox"] {
+            width: auto;
+            margin-right: 5px;
+        }
+        input[type="submit"] {
+            background-color: #2c8ec8;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #1b6fa8;
+        }
+        .header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo {
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px auto;
+}
+    </style>
+</head>
+<body>
+
+   <div class="header">
+    <img src="gambar.png" alt="logo stitek HTML" class="logo">
+    <p>
+        Klik link website
+        <a href="https://www.stitek.ac.id" title="Pergi ke website STITEK">link ke website stitek</a>.
+    </p>
+    <h1>Formulir Pendaftaran Mahasiswa Baru</h1>
+</div>
+
+
+    <form action="/submit" method="post">
+        <fieldset>
+            <legend>Data Pribadi</legend>
+
+            <label for="nama">Nama Lengkap:</label>
+            <input type="text" id="nama" name="nama" placeholder="Contoh: Aufa Nabith Fadlu Ramanda" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="nabithaufanabith@gmail.com" required>
+
+            <label>Jenis Kelamin:</label>
+            <input type="radio" id="pria" name="jenis_kelamin" value="Pria" required>
+            <label for="pria">Pria</label>
+            <input type="radio" id="wanita" name="jenis_kelamin" value="Wanita">
+            <label for="wanita">Wanita</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Hobi</legend>
+            <label><input type="checkbox" name="hobi" value="Menonton"> Basket</label>
+            <label><input type="checkbox" name="hobi" value="Olahraga"> Memasak</label>
+            <label><input type="checkbox" name="hobi" value="Musik"> Game</label>
+            <label><input type="checkbox" name="hobi" value="Musik"> Lainnya</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Pilihan Jurusan</legend>
+            <label for="jurusan">Pilih Jurusan:</label>
+            <select id="jurusan" name="jurusan" required>
+                <option value="">-- Pilih Jurusan --</option>
+                <option value="Teknik Informatika">Teknik Informatika</option>
+                <option value="Teknik Elektro">Teknik Elektro</option>
+                <option value="Sistem Informasi">Sistem Informasi</option>
+                <option value="Bisnis Digital">Bisnis Digital</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+  <legend>Alamat Lengkap</legend>
+  <label for="alamat">Alamat:</label><br>
+  <textarea id="alamat" name="alamat" rows="4" cols="40" placeholder="Tulis alamat lengkap Anda di sini..."></textarea>
+  <input type="submit" value="Kirim Formulir">
+</fieldset>
